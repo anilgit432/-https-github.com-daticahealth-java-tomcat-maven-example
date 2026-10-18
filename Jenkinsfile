@@ -2,9 +2,8 @@ pipeline{
     agent any
 
     tools {
-        java 
-        maven
-        tomcat
+        java ('Java_home')
+        maven('my maven')
     }
     stages {
         stage ('1checkout'){
