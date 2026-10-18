@@ -32,6 +32,7 @@ pipeline{
         stage ('5 deploy'){
             steps {
                 sh 'ls -l target/*.war'
+                sh 'sh 'cp target/*.war /opt/homebrew/Cellar/tomcat@9/9.0.122/libexec/webapps/my-java-webapp.war'
                 echo 'war file ready for tomcat deployment'
             }
         }
