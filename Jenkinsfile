@@ -7,7 +7,8 @@ pipeline{
     }
     stages {
         stage ('1checkout'){
-            steps {checkout scm
+            steps {
+                checkout scm
             echo 'code checkout successfully'
         }
         }
@@ -36,5 +37,4 @@ pipeline{
                 echo 'war file ready for tomcat deployment'
             }
         }
-    
-}
+    }
