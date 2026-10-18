@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     tools {
-        java ('Java_home')
+        jdk ('Java_home')
         maven('my maven')
     }
     stages {
@@ -13,13 +13,13 @@ pipeline{
         }
         stage ('2 build'){
             steps {
-               sh mvn clean compile
+               sh 'mvn clean compile'
             echo 'build completed'
             }
     }
     stage ('3 test'){
         steps{
-            sh mvn test
+            sh 'mvn test'
             echo 'test completed'
         }
         }
